@@ -1,3 +1,6 @@
 [submodule "bem-core"]
 	path = bem-core
 	url = git@github.com:bem/bem-core.git
+[submodule "bemhtml"]
+	path = bemhtml
+	url = git@github.com:bem/bemhtml.git
