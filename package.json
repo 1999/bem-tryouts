@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "enb" : ">=0.10.0",
-    "enb-bemhtml" : ">=0.0.3"
+    "enb-xjst": ">=1.0.0"
   },
   "devDependencies": {},
   "private": true
