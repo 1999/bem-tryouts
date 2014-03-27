@@ -14,15 +14,18 @@ module.exports = function(config) {
             require("enb/techs/bemdecl-from-bemjson"),
             require("enb/techs/deps-old"),
             require("enb/techs/files"),
+            require("enb/techs/css"),
+            require("enb/techs/js"),
             require("bh/techs/bh-server"),
             require("enb/techs/html-from-bemjson")
         ]);
-        nodeConfig.addTargets(["?.html"]);
+        nodeConfig.addTargets(["?.html", "?.css", "?.js"]);
 
         function getLevels() {
             return [
                 {"path":"bem-core/common.blocks","check":true},
-                {"path":"bem-core/desktop.blocks","check":true}
+                {"path":"bem-core/desktop.blocks","check":true},
+                {"path":"desktop.blocks","check":true}
             ].map(function(l) { return config.resolvePath(l); });
         }
     });
