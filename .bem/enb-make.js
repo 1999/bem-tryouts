@@ -14,7 +14,7 @@ module.exports = function(config) {
             require("enb/techs/bemdecl-from-bemjson"),
             require("enb/techs/deps-old"),
             require("enb/techs/files"),
-            require("enb-xjst/techs/bemhtml"),
+            require("bh/techs/bh-server"),
             require("enb/techs/html-from-bemjson")
         ]);
         nodeConfig.addTargets(["?.html"]);
