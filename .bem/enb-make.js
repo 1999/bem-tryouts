@@ -1,10 +1,10 @@
 module.exports = function (config) {
     config.node('pages/index', function (nodeConfig) {
         nodeConfig.addTechs([
-            // [ require('enb/techs/levels'), { levels: getLevels(config) } ],
-            // [ require('enb/techs/file-provider'), { target: '?.bemdecl.js' } ],
-            // require('enb/techs/deps-old'),
-            // require('enb/techs/files')
+            require('enb/techs/bemdecl-from-bemjson')
+            [ require('enb/techs/levels'), { levels: getLevels(config) } ],
+            [ require('enb/techs/file-provider'), { target: '?.bemdecl.js' } ],
+            require('enb/techs/deps-old'),
             require('enb/techs/files'),
             require('enb/techs/js'),
             require('enb/techs/css'),
@@ -18,11 +18,9 @@ module.exports = function (config) {
 
 function getLevels(config) {
     return [
-      { path: 'bem-bl/blocks-common', check: false },
-      { path: 'bem-bl/blocks-desktop', check: false },
-      { path: 'lego/blocks-common', check: false },
-      { path: 'lego/blocks-desktop', check: false },
-      'common.blocks',
+      { path: 'bem-core/common.blocks', check: false },
+      { path: 'bem-core/desktop.blocks', check: false },
+      // 'common.blocks',
       'desktop.blocks'
     ].map(function(levelPath) { return config.resolvePath(levelPath); });
 }
