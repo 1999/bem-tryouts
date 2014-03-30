@@ -26,15 +26,15 @@
                 },
                 {
                     block: 'menu',
+                    js: true,
                     content: [
-                        { elem: 'item', text: 'Магазин', js: true },
-                        { elem: 'item', text: 'Условия доставки', js: true },
-                        { elem: 'item', text: 'Бонусы', js: true },
-                        { elem: 'item', text: 'Контакты', js: true },
+                        { elem: 'item', text: 'Магазин' },
+                        { elem: 'item', text: 'Условия доставки' },
+                        { elem: 'item', text: 'Бонусы' },
+                        { elem: 'item', text: 'Контакты' },
                         {
                             elem: 'item',
                             text: 'Вход',
-                            js: true,
                             mods: { pos: 'right' }
                         }
                     ]

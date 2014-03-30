@@ -1,5 +1,5 @@
 modules.require(['i-bem__dom'], function (DOM) {
-    DOM.decl('menu__item', {
+    DOM.decl('menu', {
         onSetMod: {
             'js' : {
                 'inited' : function() {
