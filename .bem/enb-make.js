@@ -15,7 +15,7 @@ module.exports = function(config) {
             require("enb/techs/deps-old"),
             require("enb/techs/files"),
             require("enb/techs/css"),
-            require("enb/techs/js"),
+            [ require("enb/techs/browser-js"), { target: '?.js'} ],
             require("bh/techs/bh-server"),
             require("enb/techs/html-from-bemjson")
         ]);
