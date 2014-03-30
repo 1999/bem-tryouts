@@ -3,9 +3,26 @@ modules.require(['i-bem__dom'], function (DOM) {
         onSetMod: {
             'js' : {
                 'inited' : function() {
-                    console.log(this.domElem[0].outerHTML);
+                    console.log("init", this.domElem[0].outerHTML);
+
+                    this.bindTo('mouseover', function() {
+                        this.toggleMod('foo', 'bar');
+                    });
+
+                    this.on('custom-evt', function() {
+                        console.log("custom event caught");
+                    });
                 }
+            },
+            foo: function (modName, modVal, currentModVal) {
+                console.log("COME ON!", modName, modVal, currentModVal);
+                this.emit('custom-evt');
             }
+        }
+    }, {
+        // @see http://ru.bem.info/tutorials/bem-js-tutorial/03-live-initialization/
+        live: function() {
+            this.liveInitOnEvent('click');
         }
     });
 });
