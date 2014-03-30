@@ -31,7 +31,7 @@
                 },
                 {
                     block: 'menu',
-                    mods: { 'body': 'yes' },
+                    mods: { 'body': 'main' },
                     content: [
                         {
                             elem: 'item',
@@ -64,26 +64,68 @@
                     ]
                 },
                 {
-                    block: 'submenu',
+                    block: 'content-wrapper',
                     content: [
-                        { elem: 'item', text: 'Корма' },
-                        { elem: 'item', text: 'Наполнители' },
-                        { elem: 'item', text: 'Переноски' },
-                        { elem: 'item', text: 'Туалеты' },
-                        { elem: 'item', text: 'Когтеточки' },
-                        { elem: 'item', text: 'Игрушки' },
-                        { elem: 'item', text: 'Груминг' },
-                        { elem: 'item', text: 'Аксессуары' },
-                        { elem: 'item', text: 'Сувениры' },
-                        { elem: 'item', text: 'Уценка' }
-                    ]
-                },
-                {
-                    block: 'content',
-                    content: [
+                                {
+                            block: 'menu',
+                            mods: { 'body': 'sub' },
+                            content: [
+                                {
+                                    'elem': 'item',
+                                    'text': 'Корма',
+                                    'url': 'http://pokormikota.ru/shop/korma'
+                                },
+                                {
+                                    'elem': 'item',
+                                    'text': 'Наполнители',
+                                    'url': 'http://pokormikota.ru/shop/chistota-i-poryadok'
+                                },
+                                {
+                                    'elem': 'item',
+                                    'text': 'Переноски',
+                                    'url': 'http://pokormikota.ru/shop/perenoski'
+                                },
+                                {
+                                    'elem': 'item',
+                                    'text': 'Туалеты',
+                                    'url': 'http://pokormikota.ru/shop/tualety'
+                                },
+                                {
+                                    'elem': 'item',
+                                    'text': 'Когтеточки',
+                                    'url': 'http://pokormikota.ru/shop/domiki-i-kogtetochki'
+                                },
+                                {
+                                    'elem': 'item',
+                                    'text': 'Игрушки',
+                                    'url': 'http://pokormikota.ru/shop/igrushki-i-suveniry'
+                                },
+                                {
+                                    'elem': 'item',
+                                    'text': 'Груминг',
+                                    'url': 'http://pokormikota.ru/shop/grooming'
+                                },
+                                {
+                                    'elem': 'item',
+                                    'text': 'Аксессуары',
+                                    'url': 'http://pokormikota.ru/shop/oshejniki-i-shlejki'
+                                },
+                                {
+                                    'elem': 'item',
+                                    'text': 'Сувениры',
+                                    'url': 'http://pokormikota.ru/shop/souvenirs'
+                                },
+                                {
+                                    'elem': 'item',
+                                    'text': 'Уценка',
+                                    'url': 'http://pokormikota.ru/shop/utsenka'
+                                }
+                            ]
+                        },
                         {
-                            block: 'header',
-                            elem: 'Интернет-магазин для кошек и их хозяев'
+                            block: 'header-text',
+                            text: 'Интернет-магазин для кошек и их хозяев',
+                            level: 1
                         },
                         {
                             block: 'text',
