@@ -1,6 +1,10 @@
 ({
     mustDeps: [
-        { block : 'header-text', mod : 'level', val: 'h1' },
-        { block : 'header-text', mod : 'level', val: 'h2' }
+        {
+            block: 'header-text',
+            mods: {
+                level: ['h1', 'h2']
+            }
+        }
     ]
 })
