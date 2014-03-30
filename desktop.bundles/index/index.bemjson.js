@@ -1,10 +1,12 @@
 ({
     block: 'page',
-    title: 'BEM Pokormikota',
+    title: 'BEM tryouts',
     favicon: '/favicon.ico',
     head: [
         { elem: 'css', url: 'index.css', ie: false },
         { elem: 'css', url: 'index', ie: true },
+        { elem: 'css', url: 'reset.css', ie: false },
+
         { block: 'i-jquery', elem: 'core' },
         { elem: 'js', url: 'ymodules.js' },
         { elem: 'js', url: 'index.js' },
@@ -18,7 +20,10 @@
                 {
                     block: 'header',
                     content: [
-                        { elem: 'logo', src: 'http://pokormikota.ru/pics/logo.jpg' },
+                        {
+                            block: 'logo',
+                            image: 'http://pokormikota.ru/pics/logo.jpg'
+                        },
                         { elem: 'cart' },
                         { elem: 'worktime' },
                         { elem: 'adv_korma' }
@@ -26,16 +31,34 @@
                 },
                 {
                     block: 'menu',
-                    js: true,
+                    mods: { 'body': 'yes' },
                     content: [
-                        { elem: 'item', text: 'Магазин' },
-                        { elem: 'item', text: 'Условия доставки' },
-                        { elem: 'item', text: 'Бонусы' },
-                        { elem: 'item', text: 'Контакты' },
+                        {
+                            elem: 'item',
+                            text: 'Магазин',
+                            url: 'http://pokormikota.ru/shop'
+                        },
+                        {
+                            elem: 'item',
+                            text: 'Условия доставки',
+                            url: 'http://pokormikota.ru/delivery'
+                        },
+                        {
+                            elem: 'item',
+                            text: 'Бонусы',
+                            url: 'http://pokormikota.ru/bonus'
+                        },
+                        {
+                            elem: 'item',
+                            text: 'Контакты',
+                            url: 'http://pokormikota.ru/contacts'
+                        },
+
                         {
                             elem: 'item',
                             text: 'Вход',
-                            mods: { pos: 'right' }
+                            url: 'http://pokormikota.ru/login',
+                            mods: { 'bind': 'right' }
                         }
                     ]
                 },
@@ -70,20 +93,50 @@
             ]
         },
         {
-            block: 'footer',
+            block: 'menu',
+            mods: { 'footer': 'yes' },
             content: [
                 {
-                    block: 'menu',
-                    content: [
-                        { elem: 'item', text: 'Магазин' },
-                        { elem: 'item', text: 'Условия доставки' },
-                        { elem: 'item', text: 'Бонусы' },
-                        { elem: 'item', text: 'Контакты' }
-                    ]
+                    elem: 'item',
+                    text: 'Магазин',
+                    url: 'http://pokormikota.ru/shop'
                 },
-                { elem: 'adv_rc' },
-                { elem: 'adv_rc_diary' },
-                { elem: 'copyright' }
+                {
+                    elem: 'item',
+                    text: 'Условия доставки',
+                    url: 'http://pokormikota.ru/delivery'
+                },
+                {
+                    elem: 'item',
+                    text: 'Бонусы',
+                    url: 'http://pokormikota.ru/bonus'
+                },
+                {
+                    elem: 'item',
+                    text: 'Контакты',
+                    url: 'http://pokormikota.ru/contacts'
+                },
+
+                {
+                    elem: 'item',
+                    content: [{
+                        block: 'adv-rc',
+                        url: 'http://pokormikota.ru/pics/banners/rc_logo120.jpg'
+                    }]
+                },
+                {
+                    elem: 'item',
+                    content: [{
+                        block: 'adv-rc',
+                        url: 'http://pokormikota.ru/pics/banners/RC-120X45.gif'
+                    }]
+                },
+
+                {
+                    elem: 'item',
+                    text: '&copy; 2010-2014 &laquo;pokormikota.ru (интернет-магазин)&raquo;',
+                    mods: { 'bind': 'right' }
+                }
             ]
         }
     ]

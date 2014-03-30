@@ -1,0 +1,8 @@
+.menu_body_yes {
+    padding: 12px 24px 0;
+    background: #E15B19;
+}
+
+.menu_body_yes .menu__item {
+    margin-right: 6px;
+}
