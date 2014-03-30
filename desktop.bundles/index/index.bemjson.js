@@ -6,6 +6,7 @@
         { elem: 'css', url: 'index.css', ie: false },
         { elem: 'css', url: 'index', ie: true },
         { block: 'i-jquery', elem: 'core' },
+        { elem: 'js', url: 'ymodules.js' },
         { elem: 'js', url: 'index.js' },
         { elem: 'meta', attrs: { name: 'description', content: '' }},
         { elem: 'meta', attrs: { name: 'keywords', content: '' }}
