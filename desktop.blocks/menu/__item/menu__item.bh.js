@@ -5,7 +5,7 @@ module.exports = function (bh) {
         },
         'menu__item': function(ctx) {
             ctx.tag('li');
-            ctx.content(ctx.json().text)
+            ctx.content(ctx.param('text'));
             ctx.mod('pos', ctx.position());
 
             if (ctx.isFirst()) {
