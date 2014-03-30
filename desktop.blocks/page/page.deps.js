@@ -3,5 +3,7 @@
         block: 'cookie'
     }, {
         block: 'functions'
+    }, {
+        block: 'jquery'
     }]
 })
