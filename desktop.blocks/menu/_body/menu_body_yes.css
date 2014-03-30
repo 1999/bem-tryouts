@@ -6,3 +6,11 @@
 .menu_body_yes .menu__item {
     margin-right: 6px;
 }
+
+.menu_body_yes .menu__item a {
+    padding: 0 6px;
+    font: 22px/42px "PT Sans", Arial, sans-serif;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 1px 1px #333;
+}
