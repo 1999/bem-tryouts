@@ -1,3 +1,8 @@
+modules.define('whoa', ['cookie'], function (provide, cookie) {
+    provide(cookie);
+});
+
+
 modules.define('i-bem__dom', function(provide, DOM) {
 
 DOM.decl('my-block', {

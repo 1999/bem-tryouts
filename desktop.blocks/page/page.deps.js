@@ -1,3 +1,7 @@
 ({
-    mustDeps: ['cookie', 'functions']
+    shouldDeps: [{
+        block: 'cookie'
+    }, {
+        block: 'functions'
+    }]
 })
