@@ -36,7 +36,8 @@
                         {
                             elem: 'item',
                             text: 'Магазин',
-                            url: 'http://pokormikota.ru/shop'
+                            url: 'http://pokormikota.ru/shop',
+                            cls: ['active']
                         },
                         {
                             elem: 'item',

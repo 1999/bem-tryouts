@@ -15,7 +15,8 @@ module.exports = function (bh) {
                     ctx.content({
                         block: 'link',
                         url: url,
-                        text: text
+                        text: text,
+                        cls: ctx.param('cls') || []
                     }, true);
                 } else {
                     ctx.content(text);
