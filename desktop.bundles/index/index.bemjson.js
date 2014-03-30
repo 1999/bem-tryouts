@@ -3,10 +3,10 @@
     title: 'BEM Pokormikota',
     favicon: '/favicon.ico',
     head: [
-        { elem: 'css', url: '_index.css', ie: false },
-        { elem: 'css', url: '_index', ie: true },
+        { elem: 'css', url: 'index.css', ie: false },
+        { elem: 'css', url: 'index', ie: true },
         { block: 'i-jquery', elem: 'core' },
-        { elem: 'js', url: '_index.js' },
+        { elem: 'js', url: 'index.js' },
         { elem: 'meta', attrs: { name: 'description', content: '' }},
         { elem: 'meta', attrs: { name: 'keywords', content: '' }}
     ],
@@ -26,13 +26,14 @@
                 {
                     block: 'menu',
                     content: [
-                        { elem: 'item', text: 'Магазин' },
-                        { elem: 'item', text: 'Условия доставки' },
-                        { elem: 'item', text: 'Бонусы' },
-                        { elem: 'item', text: 'Контакты' },
+                        { elem: 'item', text: 'Магазин', js: true },
+                        { elem: 'item', text: 'Условия доставки', js: true },
+                        { elem: 'item', text: 'Бонусы', js: true },
+                        { elem: 'item', text: 'Контакты', js: true },
                         {
                             elem: 'item',
                             text: 'Вход',
+                            js: true,
                             mods: { pos: 'right' }
                         }
                     ]
