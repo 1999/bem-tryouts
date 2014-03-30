@@ -17,6 +17,8 @@ modules.require(['i-bem__dom'], function (DOM) {
             foo: function (modName, modVal, currentModVal) {
                 console.log("COME ON!", modName, modVal, currentModVal);
                 this.emit('custom-evt');
+
+                this.domElem.append('<li>' + Date.now()+ '</li>')
             }
         }
     }, {
