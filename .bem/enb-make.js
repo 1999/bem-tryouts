@@ -16,7 +16,7 @@ module.exports = function(config) {
             require("enb/techs/files"),
             require("enb/techs/css"),
             [ require("enb/techs/browser-js"), { target: '?.js'} ],
-            require("bh/techs/bh-server"),
+            [ require("bh/techs/bh-server"), { jsAttrName: 'data-bem', jsAttrScheme: 'json' } ],
             require("enb/techs/html-from-bemjson")
         ]);
         nodeConfig.addTargets(["?.html", "?.css", "?.js"]);

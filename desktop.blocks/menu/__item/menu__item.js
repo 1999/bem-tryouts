@@ -1,20 +1,11 @@
-modules.define('whoa', ['cookie'], function (provide, cookie) {
-    provide(cookie);
-});
-
-
-modules.define('i-bem__dom', function(provide, DOM) {
-
-DOM.decl('my-block', {
-    onSetMod: {
-        'js' : {
-            'inited' : function() {
-                console.log(this.domElem[0].outerHTML);
+modules.require(['i-bem__dom'], function (DOM) {
+    DOM.decl('menu__item', {
+        onSetMod: {
+            'js' : {
+                'inited' : function() {
+                    console.log(this.domElem[0].outerHTML);
+                }
             }
         }
-    }
-});
-
-provide(DOM);
-
+    });
 });
