@@ -4,10 +4,10 @@ modules.require(['i-bem__dom'], function (DOM) {
             item: {
                 foo: {
                     bar: function () {
-                        this.domElem[0].html('FOO!');
+                        this.domElem.eq(0).html('FOO!');
                     },
                     '': function () {
-                        this.domElem[0].html('BARRR!');
+                        this.domElem.eq(0).html('BARRR!');
                     }
                 }
             }
@@ -15,8 +15,7 @@ modules.require(['i-bem__dom'], function (DOM) {
         onSetMod: {
             js: {
                 inited: function () {
-                    console.log("init", this.domElem[0].outerHTML, this);
-                    this.toggleMod(this.findElem('item')[0], 'foo', 'bar', '');
+                    this.toggleMod(this.findElem('item').eq(0), 'foo', 'bar', '');
                 }
             }
         }
