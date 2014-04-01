@@ -24,9 +24,58 @@
                             block: 'logo',
                             image: 'http://pokormikota.ru/pics/logo.jpg'
                         },
-                        { elem: 'cart' },
-                        { elem: 'worktime' },
-                        { elem: 'adv_korma' }
+                        {
+                            block: 'cart',
+                            content: [
+                                {
+                                    block: 'cart-icon',
+                                    image: 'http://pokormikota.ru/pics/icon-cart.png',
+                                    width: 54,
+                                    height: 55
+                                },
+                                {
+                                    elem: 'text',
+                                    text: 'Корзина',
+                                    mods: { head: 'yes' }
+                                },
+                                {
+                                    elem: 'text',
+                                    text: 'В Вашей корзине<br>пусто'
+                                }
+                            ]
+                        },
+                        {
+                            block: 'worktime-and-adv',
+                            content: {
+                                block: 'paragraph',
+                                content: [
+                                    'Время работы доставки:<br><b>с 10 до 21 часа</b>',
+                                    {
+                                        block: 'links',
+                                        content: [
+                                            'Корма для кошек:<br>',
+                                            {
+                                                block: 'link',
+                                                url: 'http://pokormikota.ru/shop/korma?brand=Royal Canin',
+                                                text: 'Royal Canin'
+                                            },
+                                            ', ',
+                                            {
+                                                block: 'link',
+                                                url: 'http://pokormikota.ru/shop/korma?brand=Nutram',
+                                                text: 'Nutram'
+                                            },
+                                            ', ',
+                                            {
+                                                block: 'link',
+                                                url: 'http://pokormikota.ru/shop/korma?brand=Shesir',
+                                                text: 'Shesir'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
                     ]
                 },
                 {

@@ -4,6 +4,6 @@ module.exports = function (bh) {
             .tag('a')
             .attr('href', ctx.param('url'))
             .content(ctx.param('text'))
-            .cls(ctx.param('cls').join(' '))
+            .cls((ctx.param('cls') || []).join(' '))
     });
 };
