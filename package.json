@@ -1,14 +1,14 @@
 {
   "author": "Dmitry Sorin",
-  "name": "bem-pokormikota",
+  "name": "bem-tryouts",
   "version": "0.0.1",
   "engines": {
-    "node": "0.6 | 0.7 | 0.8 | 0.9"
+    "node": "0.10"
   },
   "dependencies": {
-    "enb" : ">=0.10.0",
-    "enb-xjst": ">=1.0.0",
-    "bh": ">=1.1.1"
+    "enb": "0.13.x",
+    "enb-bh": "0.2.x",
+    "bh": "2.1.x"
   },
   "devDependencies": {},
   "private": true
