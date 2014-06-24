@@ -1,24 +1,27 @@
 var fs = require("fs");
 var bh = require("bh");
 var vm = require("vm");
-var bemhtmlFilePath = "desktop.bundles/index/index.bemhtml.js";
-var bemJSON = fs.readFileSync("desktop.bundles/index/index.bemjson.js", {encoding: "utf-8"});
 
-var dropRequireCache = require('enb/lib/fs/drop-require-cache');
+var bemJson = vm.runInThisContext(fs.readFileSync("desktop.bundles/index/index.bemjson.js", {encoding: "utf-8"}));
+var resultTarget = 'desktop.bundles/index/index.bh.js';
 var enbBuilder = require('enb/lib/server/server-middleware').createBuilder({
     cdir: process.cwd()
 });
 
-enbBuilder(bemhtmlFilePath).then(function () {
-    var bemhtmlAbsFilePath = process.cwd() + '/' + bemhtmlFilePath;
-    dropRequireCache(require, bemhtmlAbsFilePath);
+enbBuilder(resultTarget).then(function () {
+    var i = 1;
+    var intervalId = setInterval(function () {
+        console.time('generate time #' + i);
+        var bh = require(process.cwd() + '/desktop.bundles/index/index.bh.js');
+        var html = bh.apply(bemJson);
+        console.timeEnd('generate time #' + i);
 
-    var bemhtml = require(bemhtmlAbsFilePath);
-    var json = vm.runInThisContext(bemJSON);
+        i += 1;
 
-    console.time("generate time");
-    console.log(bemhtml.BEMHTML.apply(json))
-    console.timeEnd("generate time");
+        if (i > 10) {
+            clearInterval(intervalId);
+        }
+    }, 1000);
 }, function (err) {
     console.error(err)
 });
