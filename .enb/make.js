@@ -14,17 +14,18 @@ module.exports = function(config) {
             require('enb/techs/deps-old'),
             require("enb/techs/bemdecl-from-bemjson"),
             [ require("enb/techs/file-provider"), { target: "?.bemjson.js" } ],
-            [ require("enb/techs/levels"), {levels: getLevels()} ]
+            [ require("enb/techs/levels"), {levels: getLevels()} ],
 
         //     require("enb/techs/deps-old"),
-        //     require("enb/techs/css"),
-        //     [ require("enb/techs/browser-js"), { target: '?.js'} ],
+            require("enb/techs/css"),
+            [ require("enb-diverse-js/techs/browser-js"), { target: '?.js'} ],
         //     [ require("bh/techs/bh-server"), { jsAttrName: 'data-bem', jsAttrScheme: 'json' } ],
-        //     require("enb/techs/html-from-bemjson")
+            [ require("enb/techs/html-from-bemjson"), { bemhtmlTarget: '?.bh.js' } ]
         ]);
 
-        // nodeConfig.addTargets(["?.html", "?.css", "?.js"]);
-        nodeConfig.addTargets(["?.bh.js"]);
+        nodeConfig.addTargets(["?.css", "?.js", "?.bh.js", "?.html"]);
+
+        // , 
 
         function getLevels() {
             return [

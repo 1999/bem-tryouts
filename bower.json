@@ -1,0 +1,17 @@
+{
+  "name": "bem-tryouts",
+  "version": "0.0.1",
+  "homepage": "https://github.com/1999/bem-tryouts",
+  "description": "BEM blocks",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bem-core": "git://github.com/bem/bem-core.git#2.4.0"
+  }
+}
