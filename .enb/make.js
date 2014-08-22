@@ -28,8 +28,8 @@ module.exports = function(config) {
 
         function getLevels() {
             return [
-                {"path":"bem-core/common.blocks","check":true},
-                {"path":"bem-core/desktop.blocks","check":true},
+                {"path":"bower_components/bem-core/common.blocks","check":true},
+                {"path":"bower_components/bem-core/desktop.blocks","check":true},
                 {"path":"desktop.blocks","check":true}
             ].map(function(l) { return config.resolvePath(l); });
         }

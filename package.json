@@ -8,7 +8,11 @@
   "dependencies": {
     "enb": "0.13.x",
     "enb-bh": "0.2.x",
-    "bh": "2.1.x"
+    "bh": "2.1.x",
+    "bower": "1.3.9"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install"
   },
   "devDependencies": {},
   "private": true
