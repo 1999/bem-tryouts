@@ -3,7 +3,7 @@ node_modules
 .idea
 .project
 .svn
-.bem/tmp
+.enb/tmp
 desktop.bundles/*/*.*
 !desktop.bundles/*/*.bemjson.js
 !desktop.bundles/*/ymodules.js
